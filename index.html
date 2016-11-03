@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<title> Trivia Game | Tara Baker</title>
-	<link rel=stylesheet href="assets/css/style.css" type="text/css">
+	<title>Trivia Game | Tara Baker</title>
+	<link rel="stylesheet" href="assets/css/reset.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
 </head>
-<body>
-	<header>
-		<h1>Trivia Game</h1>
-	</header>
+<body id="gradient">
+
+	<section class="fifty">
+		<h1>50 States Trivia Game</h1>
+	</section>
 	
-	<section>
-		<button id="start" alt="start game">Start Game</button>
+	<section class="fifty" id="instructions">
+		<p><strong>How to play this game:</strong> Once you press the "START GAME" button, you will have 30 seconds to answer all the questions. This questions are multiple-choice, and for each right answeryou get (some prize here). For each wrong answer you get (some punishment here). The game ends whenyou have press the "FINISH" button, or when the 30 seconds are up. You can see the score displayed below the questions. Have fun playing!</p>
+		<button id="start" alt="start game">START GAME</button>
+		<br />
 	</section>
 
-	<section id="questions">
+	<section class="fifty" id="questions">
 		<form id="myForm">
 			<div id="question_one">
-				<h2>Question 1</h2>
-				<p>Carson City is the capital of Which State?</p>
+				<h2 class="fifty">Question 1</h2>
+				<p class="fifty"> Carson City is the capital of Which State?</p>
 				<input type="radio" name="1" value="Texas" /> Texas
 				<input type="radio" name="1" value="Virginia" /> Virginia
 				<input type="radio" name="1" value="North Dakota" /> North Dakota
@@ -33,17 +38,11 @@
 				<input type="radio" name="2" value="Minnesota" /> Minnesota
 			</div>
 		</form>
-
-		<section>
-			<button id="next_question" alt="next question">Next Question</button>
-		</section>
-
 	</section>
 
-	<footer>
+	<section class="fifty">
 		<p>&copy; Copyright 2016 Tara Baker</p>
-	</footer>
-
+	</section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="assets/javascript/app.js"></script>

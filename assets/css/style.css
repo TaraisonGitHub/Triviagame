@@ -1,0 +1,101 @@
+#gradient {
+	/* fallback color for browsers that don't support gradients */
+	background-color: blue;
+	/* background gradient */
+	background: repeating-linear-gradient(
+ 		90deg,
+  		#606dbc,
+  		#606dbc 20px,
+  		#465298 20px,
+  		#465298 40px
+	);
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+}
+
+body {
+	text-align: center;
+}
+
+section { 
+	width: 960px;
+	background-color: #fff;
+	margin: auto;
+	border: 8px solid #07074f;
+	border-radius: 18px 18px;
+}
+
+h1, h2, p {
+	padding: 30px;
+}
+
+h1 {
+	font-family: 'Arial Black', sans-serif;
+	font-size: 36px;
+	font-style: bold;
+	color: #07074f;
+}
+
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+p {
+	font-size: 18px;
+	line-height: 1.5em;
+}
+
+/* created this class to use the margin property twice on the section elements */
+button {
+	width: 150px;
+	height: 80px;
+	background-color: #fff;
+	border-width: 3px;
+	border-color: #990000;
+	border-style: solid;
+	border-radius: 8px 8px;
+	color: #07074f;
+	position: relative;
+	top: -15px;
+	height: 40px;
+	font-family: 'Roboto Slab', serif;
+}
+
+button:hover {
+	background-color: red;
+	border-width: 3px;
+	border-color: #990000;
+	border-style: solid;
+	color: #fff;
+	border-radius: 8px 8px;
+	position: relative;
+	top: -15px;
+	height: 40px;
+	font-family: 'Roboto Slab', serif;
+}
+
+button:active {
+	background-color: #465298;
+	border-width: 3px;
+	border-color: #990000;
+	border-style: solid;
+	color: #fff;
+	border-radius: 8px 8px;
+	position: relative;
+	top: -15px;
+	height: 40px;
+	font-family: 'Roboto Slab', serif;
+}
+
+div {
+	padding-bottom: 25px;
+}
+
+strong {
+	text-decoration: underline;
+}
+
+.fifty {
+	margin-top: 15px;
+}

@@ -1,6 +1,54 @@
 
 //==================PSEUDO-CODE===================================
 
+//When game loads, the screen is a set of instructions and a START GAME button
+//User presses START GAME button (this starts the timer)
+//Screen becomes a form with radio button groups
+//User selects one radio button from each group
+//Selections are compared against an array of correct answers to see if they match, if they match, the answer is "correct", if there is no match the answer is "incorrect"
+//Display results when all questions are answered, or when timer runs out (this ends the game)
+//After timer runs out, a REPLAY button appears
+
+//==================GAME INITIALIZE===============================
+
+$('#start').on('click', function() {
+  startTimer();
+  console.log("started");
+  var myInterval;
+
+    function startTimer () {
+      myInterval = setInterval(intervalEnd, 3000 * 30);
+
+    }
+    function intervalEnd() {
+      alert("Time's Up!");
+    }
+
+// call the function getAnswer twice.
+ var clickedValue = "";
+ for (var n = 1; n < 3; n++) {
+    clickedValue = getAnswer(n);
+    //if something is checked (not empty) then check if it is correct
+    if (clickedValue != null) {
+        checkAnswer(clickedValue);
+    }
+  }
+  console.log(correctAnswers);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var correctAnswers = 0;
 //the questions should be hidden when the game loads
@@ -34,39 +82,5 @@ function getAnswer(radioName) { //radoName is just a variable being passed into 
   }
 }
 
-$('#start').on('click', function() {
-//	$('#start').hide();
-	startTimer();
-	console.log("started");
-	var myInterval;
-
-    function startTimer () {
-    	myInterval = setTimeout(intervalEnd, 3000);
-    	alert("myInterval");
-    }
-    function intervalEnd() {
-    	alert("Time's Up!");
-    }
-
-// call the function getAnswer twice.
- var clickedValue = "";
- for (var n = 1; n < 3; n++) {
-    clickedValue = getAnswer(n);
-    //if something is checked (not empty) then check if it is correct
-    if (clickedValue != null) {
-        checkAnswer(clickedValue);
-    }
-  }
-  alert(correctAnswers);
 
 
-    //question one should appear after the button is clicked
-//    $('#question_one').show();
- //   $('#next_question').show();
-});
-
-//display results when all questions are answered, or when timer runs out
-//user makes a selection
-
-//record whether selection was correct answer or not, stor in wins and looses variables
-//repeat previous two steps for all the questions in the quiz
