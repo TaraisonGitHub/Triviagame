@@ -99,3 +99,9 @@ strong {
 .fifty {
 	margin-top: 15px;
 }
+
+/* the finish button keeps jumping out of its container without this property */
+#finish {
+	position: relative;
+	top: 20px;
+}
